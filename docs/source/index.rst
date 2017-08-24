@@ -20,7 +20,7 @@ Indices and tables
    :alt: Documentation Status
 
 
-Welcome to Django REST Framework Keyclaok's documentation!
+Welcome to Django REST Framework Keycloak's documentation!
 ==========================================================
 
 **django-rest-framework-keycloak** package provides Keycloak support.
