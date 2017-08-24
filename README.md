@@ -1,4 +1,4 @@
-[![Documentation Status](https://readthedocs.org/projects/python-keycloak/badge/?version=latest)](http://python-keycloak.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/django-rest-framework-keycloak/badge/?version=latest)](http://django-rest-framework-keycloak.readthedocs.io/en/latest/?badge=latest)
 
 Django REST Framework Keyclaok
 ====================
@@ -35,13 +35,49 @@ https://bitbucket.org/agriness/django-rest-framework-keycloak/issues
 
 ## Documentation
 
-The documentation for **django-rest-framework-keycloak** is available on [readthedocs](http://python-keycloak.readthedocs.io).
+The documentation for **django-rest-framework-keycloak** is available on [readthedocs](http://django-rest-framework-keycloak.readthedocs.io).
 
 ## Contributors
 
-* [Agriness Team](http://www.agriness.com/pt/)
+* [Agriness Team](http://www.agriness.com/)
 
 ## Usage
+
+1. Add "django_keycloak" to your INSTALLED_APPS setting like this::
+
+```python
+    INSTALLED_APPS = [
+        ...
+        'django_keycloak',
+    ]
+```
+
+2. Add "keycloak_django.middleware.KeycloakMiddleware" to your MIDDLEWARE setting like this::
+
+```python
+   MIDDLEWARE = [
+       ...
+       'keycloak_django.middleware.KeycloakMiddleware'
+       ...
+   ]
+```
+
+3. Add configure Keycloak::
+
+```python
+   KEYCLOAK_CONFIG = {
+       'KEYCLOAK_SERVER_URL': 'http://localhost/auth/',
+       'KEYCLOAK_REALM': 'your_realm',
+       'KEYCLOAK_CLIENT_ID': 'your_client',
+       'KEYCLOAK_CLIENT_SECRET_KEY': 'secret_key',
+       'KEYCLOAK_CLIENT_PUBLIC_KEY': 'public_key',
+       'KEYCLOAK_DEFAULT_ACCESS': 'DENY', # DENY or ALLOW (Default is DENY)
+       'KEYCLOAK_AUTHORIZATION_CONFIG': os.path.join(BASE_DIR,  'your-client-authz-config.json'),
+       'KEYCLOAK_METHOD_VALIDATE_TOKEN': 'INTROSPECT', # INTROSPECT OR DECODE (Default is INTROSPECT)
+   }
+```
+
+4. Map the scopes of the APIView::
 
 ```python
 
