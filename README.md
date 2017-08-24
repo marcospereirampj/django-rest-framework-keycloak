@@ -43,7 +43,7 @@ The documentation for **django-rest-framework-keycloak** is available on [readth
 
 ## Usage
 
-1. Add "django_keycloak" to your INSTALLED_APPS setting like this::
+* Add "django_keycloak" to your INSTALLED_APPS setting like this::
 
 ```python
     INSTALLED_APPS = [
@@ -52,7 +52,7 @@ The documentation for **django-rest-framework-keycloak** is available on [readth
     ]
 ```
 
-2. Add "keycloak_django.middleware.KeycloakMiddleware" to your MIDDLEWARE setting like this::
+* Add "keycloak_django.middleware.KeycloakMiddleware" to your MIDDLEWARE setting like this::
 
 ```python
    MIDDLEWARE = [
@@ -62,7 +62,7 @@ The documentation for **django-rest-framework-keycloak** is available on [readth
    ]
 ```
 
-3. Add configure Keycloak::
+* Add configure Keycloak::
 
 ```python
    KEYCLOAK_CONFIG = {
@@ -77,7 +77,7 @@ The documentation for **django-rest-framework-keycloak** is available on [readth
    }
 ```
 
-4. Map the scopes of the APIView::
+* Map the scopes of the APIView::
 
 ```python
 
