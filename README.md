@@ -1,6 +1,6 @@
 [![Documentation Status](https://readthedocs.org/projects/django-rest-framework-keycloak/badge/?version=latest)](http://django-rest-framework-keycloak.readthedocs.io/en/latest/?badge=latest)
 
-Django REST Framework Keyclaok
+Django REST Framework Keycloak
 ====================
 
 **django-rest-framework-keycloak** package provides Keycloak support.
