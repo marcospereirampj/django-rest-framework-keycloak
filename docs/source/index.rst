@@ -60,7 +60,7 @@ Please report bugs and feature requests at
 Documentation
 ==================
 
-The documentation for **django-rest-framework-keycloak** is available on `readthedocs <http://python-keycloak.readthedocs.io>`_.
+The documentation for **django-rest-framework-keycloak** is available on `readthedocs <http://django-rest-framework-keycloak.readthedocs.io>`_.
 
 Contributors
 ==================
