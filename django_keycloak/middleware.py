@@ -18,7 +18,7 @@
 from django.conf import settings
 from django.http.response import JsonResponse
 from django.utils.deprecation import MiddlewareMixin
-from keycloak import Keycloak
+from keycloak import KeycloakOpenID
 from keycloak.exceptions import KeycloakInvalidTokenError
 from rest_framework.exceptions import PermissionDenied, AuthenticationFailed, NotAuthenticated
 
@@ -48,10 +48,10 @@ class KeycloakMiddleware(MiddlewareMixin):
         self.keycloak_authorization_config = self.config.get('KEYCLOAK_AUTHORIZATION_CONFIG', None)
 
         # Create Keycloak instance
-        self.keycloak = Keycloak(server_url=self.server_url,
-                                 client_id=self.client_id,
-                                 realm_name=self.realm,
-                                 client_secret_key=self.client_secret_key)
+        self.keycloak = KeycloakOpenID(server_url=self.server_url,
+                                       client_id=self.client_id,
+                                       realm_name=self.realm,
+                                       client_secret_key=self.client_secret_key)
 
         # Read policies
         if self.keycloak_authorization_config:
