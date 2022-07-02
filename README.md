@@ -52,12 +52,12 @@ The documentation for **django-rest-framework-keycloak** is available on [readth
     ]
 ```
 
-* Add "keycloak_django.middleware.KeycloakMiddleware" to your MIDDLEWARE setting like this::
+* Add "django_keycloak.middleware.KeycloakMiddleware to your MIDDLEWARE setting like this::
 
 ```python
    MIDDLEWARE = [
        ...
-       'keycloak_django.middleware.KeycloakMiddleware'
+       'django_keycloak.middleware.KeycloakMiddleware'
        ...
    ]
 ```
